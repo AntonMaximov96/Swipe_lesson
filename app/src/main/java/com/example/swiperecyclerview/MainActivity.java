@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                              new MyButtonClickListener() {
                             @Override
                             public void onClick(int pos) {
-                                Toast.makeText(MainActivity.this, "Delete click", Toast.LENGTH_SHORT);
+                                Toast.makeText(MainActivity.this, "Delete click", Toast.LENGTH_SHORT).show();
                             }
                         }
                 ));
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                         new MyButtonClickListener() {
                             @Override
                             public void onClick(int pos) {
-                                Toast.makeText(MainActivity.this, "Update click", Toast.LENGTH_SHORT);
+                                Toast.makeText(MainActivity.this, "Update click", Toast.LENGTH_SHORT).show();
                             }
                         }
                 ));
