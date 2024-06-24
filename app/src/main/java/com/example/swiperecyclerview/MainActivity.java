@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     MyAdapter adapter;
     LinearLayoutManager layoutManager;
-
+    List<Item> itemList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(int pos) {
                                 Toast.makeText(MainActivity.this, "Delete click", Toast.LENGTH_SHORT).show();
+
+
                             }
                         }
                 ));
@@ -71,11 +73,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void generateItem() {
-        List<Item> itemList = new ArrayList<>();
+
         for (int i = 0; i < 50; i++) {
             itemList.add(new Item("Pie 0" + (++i), "100.000$", R.drawable.cartinka));
         }
+
+
         adapter = new MyAdapter(this, itemList);
         recyclerView.setAdapter(adapter);
     }
+
+
 }
